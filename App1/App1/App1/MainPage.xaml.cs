@@ -12,7 +12,7 @@ namespace App1
 {
     public partial class MainPage : ContentPage
     {
-        string lampstatus= "off";
+        string sensordata;
         client test = new client();
         public MainPage()
         {
@@ -22,29 +22,14 @@ namespace App1
 
         private void connect_Clicked(object sender, EventArgs e)
         {
-            if(lampstatus == "off")
-            {
-                lampstatus = "on";
-            }
-            else
-            {
-                lampstatus = "off";
-            }
-            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram,ProtocolType.Udp);
-
-            IPAddress serverAddr = IPAddress.Parse("192.168.1.36");
-
-            IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
-
-            string text = lampstatus;
-            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
-
-            sock.SendTo(send_buffer, endPoint);
+            test.OpenConnection();
         }
         private void disconnect_Clicked(object sender, EventArgs e)
-        {
-            test.CloseConnection();
+        {          
+            test.CloseConnection(sensordata);
+            Label1.Text = sensordata;
         }
+
 
        
 

@@ -24,18 +24,22 @@ byte mac[] = {
 IPAddress ip(192, 168, 1, 36);
 
 unsigned int localPort = 11000;      // local port to listen on
-
+#define echoPin 7
+#define   trigPin 8
 // buffers for receiving and sending data
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE];  // buffer to hold incoming packet,
 char ReplyBuffer[] = "acknowledged";        // a string to send back
-
+long duration; 
+long distance; 
 // An EthernetUDP instance to let us send and receive packets over UDP
 EthernetUDP Udp;
 
 void setup() {
   // You can use Ethernet.init(pin) to configure the CS pin
   Ethernet.init(10);  // Most Arduino shields
-   pinMode(8, OUTPUT); 
+   pinMode(9, OUTPUT); 
+   pinMode(echoPin, INPUT);
+   pinMode(trigPin, OUTPUT) ; 
   //Ethernet.init(0);   // Teensy 2.0
   //Ethernet.init(20);  // Teensy++ 2.0
   //Ethernet.init(15);  // ESP8266 with Adafruit Featherwing Ethernet
@@ -90,15 +94,25 @@ void loop() {
     String test = String(packetBuffer);
     Serial.println(test.length());
     if(test == "on"){
-      digitalWrite(8, HIGH); 
+      digitalWrite(9, HIGH); 
       }
      if(test == "off"){
-      digitalWrite(8, LOW); 
+      digitalWrite(9, LOW); 
+      }
+    if(test == "sens"){
+      digitalWrite(trigPin,LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin,LOW);
+  duration = pulseIn(echoPin,HIGH);
+  distance = duration/58.2;
+  Serial.println(distance); 
       }
 
     // send a reply to the IP address and port that sent us the packet we received
     Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
-    Udp.write(ReplyBuffer);
+    Udp.write(distance);
     Udp.endPacket();
   }
   delay(10);

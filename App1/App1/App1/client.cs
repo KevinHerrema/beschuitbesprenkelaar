@@ -8,58 +8,50 @@ namespace App1
 {
     class client
     {
-        public static Socket sender;
-        public static IPAddress ipAddress = IPAddress.Parse("192.168.178.47");
-        public static EndPoint remoteEP;
-        public static byte[] bytes = new byte[1024];
 
+        public string lampstatus = "off";
         public void OpenConnection()
         {
-            try
+            if (lampstatus == "off")
             {
-                remoteEP = new IPEndPoint(ipAddress, 80);
-                sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-                sender.Connect(remoteEP);
+                lampstatus = "on";
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.ToString());
+                lampstatus = "off";
             }
+            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+
+            IPAddress serverAddr = IPAddress.Parse("192.168.1.36");
+
+            IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
+
+            string text = lampstatus;
+            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
+
+            sock.SendTo(send_buffer, endPoint);
         }
 
-        public void CloseConnection()
+        public string CloseConnection(string ontvangen)
         {
-            sender.Shutdown(SocketShutdown.Both);
-            sender.Close();
+            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+
+            IPAddress serverAddr = IPAddress.Parse("192.168.1.36");
+
+            IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
+
+            byte[] recieve_buffer = new byte[1024];
+            string text = "sens";
+            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
+
+            sock.SendTo(send_buffer, endPoint);
+
+
+            int bytesync = sock.Receive(recieve_buffer);
+
+            return ontvangen = Encoding.ASCII.GetString(recieve_buffer, 0, bytesync);
         }
 
-        public void Send(string message)
-        {
-            try
-            {
-                byte[] msg = Encoding.ASCII.GetBytes(message);
-                sender.Send(msg);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
-        }
-
-        public string Receive()
-        {
-            try
-            {
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            Send("Hallo");
-            int bytesRec = sender.Receive(bytes);
-            return Encoding.ASCII.GetString(bytes, 0, bytesRec);
-        }
+        
     }
 }
