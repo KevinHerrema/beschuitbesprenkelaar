@@ -1933,24 +1933,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kevin\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Jelmer\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj",
       "projectName": "App1.Android",
-      "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj",
-      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\obj\\",
+      "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj",
+      "packagesPath": "C:\\Users\\Jelmer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jelmer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1964,8 +1964,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj": {
-              "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj"
+            "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj"
             }
           }
         }

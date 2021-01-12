@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj": {}
+    "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj": {
+    "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj",
         "projectName": "App1.Android",
-        "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\obj\\",
+        "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj",
+        "packagesPath": "C:\\Users\\Jelmer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jelmer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj": {
-                "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj"
+              "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj": {
+                "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj"
               }
             }
           }
@@ -54,20 +54,20 @@
         }
       }
     },
-    "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj": {
+    "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevin\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\obj\\",
+        "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj",
+        "packagesPath": "C:\\Users\\Jelmer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jelmer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -119,7 +119,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
