@@ -23,6 +23,7 @@ namespace App1
         private void connect_Clicked(object sender, EventArgs e)
         {
             test.OpenConnection();
+            
         }
         private void disconnect_Clicked(object sender, EventArgs e)
         {          
@@ -30,8 +31,9 @@ namespace App1
             Label1.Text = sensordata;
         }
 
-
-       
-
+        private void send_Clicked(object sender, EventArgs e)
+        {
+            test.beslagkeuze();
+        }
     }
 }

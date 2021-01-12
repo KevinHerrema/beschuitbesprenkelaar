@@ -69,7 +69,15 @@ void setup() {
   // start UDP
   Udp.begin(localPort);
 }
+void clear() 
 
+{
+
+ for (int i= 0; i<UDP_TX_PACKET_MAX_SIZE; i++)
+
+    packetBuffer[i]=0;
+
+}
 void loop() {
   // if there's data available, read a packet
   
@@ -88,18 +96,19 @@ void loop() {
     Serial.print(", port ");
     Serial.println(Udp.remotePort());
 
-    // read the packet into packetBufffer
+    clear();
     Udp.read(packetBuffer, UDP_TX_PACKET_MAX_SIZE);
     Serial.println("Contents:");
     String test = String(packetBuffer);
     Serial.println(test.length());
+    Serial.println(test);
     if(test == "on"){
       digitalWrite(9, HIGH); 
       }
      if(test == "off"){
       digitalWrite(9, LOW); 
       }
-    if(test == "sens"){
+    if(test == "sen"){
       digitalWrite(trigPin,LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin,HIGH);
@@ -107,13 +116,15 @@ void loop() {
   digitalWrite(trigPin,LOW);
   duration = pulseIn(echoPin,HIGH);
   distance = duration/58.2;
-  Serial.println(distance); 
+  Serial.println(distance);
+   
       }
 
     // send a reply to the IP address and port that sent us the packet we received
     Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
     Udp.write(distance);
     Udp.endPacket();
+    
   }
   delay(10);
 }
