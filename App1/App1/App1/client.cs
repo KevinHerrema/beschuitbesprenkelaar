@@ -10,7 +10,7 @@ namespace App1
     {   public Socket sock;
         IPAddress serverAddr = IPAddress.Parse("192.168.1.36");
         public IPEndPoint endPoint;
-        string lampstatus = "off";
+        public string lampstatus = "off";
 
      
 
@@ -21,14 +21,14 @@ namespace App1
             sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             sock.Connect(endPoint);
 
-           
+            
 
             
         }
 
-        public void beslagkeuze()
+        public string beslagkeuze()
         {
-            if (lampstatus == "off")
+           if (lampstatus == "off")
             {
                 lampstatus = "on";
             }
@@ -40,28 +40,11 @@ namespace App1
             byte[] send_buffer = Encoding.ASCII.GetBytes(text);
 
             sock.SendTo(send_buffer, endPoint);
-
+            return (lampstatus);
         }
 
-        public string CloseConnection(string ontvangen)
-        {
-            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-
-            IPAddress serverAddr = IPAddress.Parse("192.168.1.36");
-
-            IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
-
-            byte[] recieve_buffer = new byte[1024];
-            string text = "sen";
-            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
-
-            sock.SendTo(send_buffer, endPoint);
-
-
-            int bytesync = sock.Receive(recieve_buffer);
-
-            return ontvangen = Encoding.ASCII.GetString(recieve_buffer, 0, bytesync);
-            
+        public void CloseConnection()
+        {            
             try
             {
                 sock.Shutdown(SocketShutdown.Both);

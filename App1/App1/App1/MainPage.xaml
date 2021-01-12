@@ -5,8 +5,8 @@
 
     <StackLayout>
         <Button Text="connect" x:Name="connect" Clicked="connect_Clicked"></Button>
-        <Button Text="vraag sensor data" x:Name="disconnect" Clicked="disconnect_Clicked"></Button>
-        <Button Text="lamp aan uit" x:Name="send" Clicked="send_Clicked"></Button>
+        <Button Text="disconnect" x:Name="disconnect" Clicked="disconnect_Clicked"></Button>
+        <Button Text="lamp aan/uit" x:Name="send" Clicked="send_Clicked"></Button>
         <Label x:Name="Label1" Text="de waarde van de sensor" ></Label>
     </StackLayout>
 

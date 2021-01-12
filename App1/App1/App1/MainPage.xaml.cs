@@ -12,7 +12,7 @@ namespace App1
 {
     public partial class MainPage : ContentPage
     {
-        string sensordata;
+        
         client test = new client();
         public MainPage()
         {
@@ -27,13 +27,15 @@ namespace App1
         }
         private void disconnect_Clicked(object sender, EventArgs e)
         {          
-            test.CloseConnection(sensordata);
-            Label1.Text = sensordata;
+            test.CloseConnection();
+            
         }
 
         private void send_Clicked(object sender, EventArgs e)
         {
-            test.beslagkeuze();
+            string label = test.beslagkeuze();
+            
+            Label1.Text = label;
         }
     }
 }
