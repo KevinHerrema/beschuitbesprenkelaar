@@ -985,3 +985,16 @@ C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\stamp\_ResolveLibrar
 C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\back.png
 C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\hagelslag.png
 C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\muisjesb.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\lukelogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\jelmerlogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\eriklogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\robinlogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\muisjesgroter.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\kevinlogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\bslogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\kevinlogogrievous.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\robinlogokenobi.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\bblogo.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\bblogoe.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\backbutton.png
+C:\Users\Jelmer\Desktop\App1\App1\App1.Android\obj\Debug\90\res\drawable\backbutton1.png

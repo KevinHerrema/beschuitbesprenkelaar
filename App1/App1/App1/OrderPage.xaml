@@ -19,12 +19,10 @@
             </BoxView.Background>
         </BoxView>
         <Grid>
-            <Path Data="M0,0H375V129.651s-9.025,2.382-55.426-5.3-70.141-41.09-130.3-41.176-83.544,33.5-130.893,41.176S0,129.651,0,129.651Z"
-                  Aspect="Fill" Fill="Orange"/>
             <StackLayout Orientation="Horizontal" Margin="25" Spacing="20" VerticalOptions="Start">
-                <ImageButton Source="back.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
+                <ImageButton Source="BackButton1.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
                     HorizontalOptions="Start" VerticalOptions="Center" Command="{Binding BackCommand}" Clicked="disconnect_Clicked" />
-                <Label Text="MENU" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalOptions="Start"/>
+                <Label Text="BELEGKEUZE" TextColor="orange" FontSize="20" FontAttributes="Bold" VerticalOptions="Start"/>
             </StackLayout>
         </Grid>
         <CarouselView Grid.Row="1" ItemsSource="{Binding MenuList}" PeekAreaInsets="80" Margin="0,-20,0,20"
@@ -49,7 +47,7 @@
                             </StackLayout>
                         </Grid>
                         <Grid HeightRequest="210" WidthRequest="210" VerticalOptions="Start" HorizontalOptions="Center">
-                            <Ellipse Stroke="White" StrokeThickness="2" Aspect="Fill"/>
+                            <Ellipse Stroke="Orange" StrokeThickness="3" Aspect="Fill"/>
                             <Image x:Name="MenuImg" Source="{Binding Image}" HeightRequest="195" WidthRequest="195" HorizontalOptions="Center"
                                     VerticalOptions="Center" />
                         </Grid>

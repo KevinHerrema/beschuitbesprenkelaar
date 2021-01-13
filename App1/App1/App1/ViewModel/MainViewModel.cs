@@ -24,10 +24,16 @@ namespace App1.ViewModel
         {
             return new List<Pick>
             {
-                new Pick { Title = "Hagelslag", Image = "Hagelslag.png", 
-                    Description = "Zin in een perfect laagje hagelslag over je beschuit? Geen probleem!" },
-                new Pick { Title = "Muisjes", Image = "MuisjesB.png", 
-                    Description = "Pas op! Misschien rennen ze wel weg!" }
+                new Pick { Title = "Robin", Image = "RobinLogoKenobi.png",
+                    Description = "Hello there" },
+                new Pick { Title = "Kevin", Image = "KevinLogoGrievous.png", 
+                    Description = "General Kenobi" },
+                new Pick { Title = "Jelmer", Image = "JelmerLogo.png",
+                    Description = "Me good in code, no ervaring needed!" },
+                new Pick { Title = "Luke", Image = "LukeLogo.png",
+                    Description = "Ik ben niet een land. Ik ben de zee. -Willem Alexander" },
+                new Pick { Title = "Erik", Image = "ErikLogo.png",
+                    Description = "Erik houdt wel eens van een beschuitje hagelslag op zijn tijd." }
             };
         }
     }

@@ -11,7 +11,7 @@ namespace App1
     class client
     {
         public Socket sock;
-        IPAddress serverAddr = IPAddress.Parse("192.168.178.11");
+        IPAddress serverAddr = IPAddress.Parse("192.168.178.36");
         public IPEndPoint endPoint;
         public string lampstatus = "off";
 
