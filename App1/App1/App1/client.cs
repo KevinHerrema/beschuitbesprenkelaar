@@ -18,12 +18,29 @@ namespace App1
 
 
 
+        //client page
+        string ontvangen;
+        public double recievesens()
+        {
+            double sensordata = Convert.ToInt32(ontvangen);
+            sensordata = sensordata / 22 * 100;
+            return sensordata;
+        }
+
         public void OpenConnection()
         {
 
             endPoint = new IPEndPoint(serverAddr, 11000);
             sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             sock.Connect(endPoint);
+            string text = "sens";
+            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
+            sock.SendTo(send_buffer, endPoint);
+            byte[] recieve_buffer = new byte[1024];
+            int bytesync = sock.Receive(recieve_buffer);
+
+            ontvangen = Encoding.ASCII.GetString(recieve_buffer, 0, bytesync);
+
 
         }
 
@@ -31,18 +48,15 @@ namespace App1
         {
             sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             endPoint = new IPEndPoint(serverAddr, 11000);
-            if (lampstatus == "off")
-            {
-                lampstatus = "on";
-            }
-            else
-            {
-                lampstatus = "off";
-            }
-            string text = lampstatus;
+
+            string text = "hagel";
             byte[] send_buffer = Encoding.ASCII.GetBytes(text);
 
             sock.SendTo(send_buffer, endPoint);
+            byte[] recieve_buffer = new byte[1024];
+            int bytesync = sock.Receive(recieve_buffer);
+
+            string ontvangen2 = Encoding.ASCII.GetString(recieve_buffer, 0, bytesync);
         }
 
         public void CloseConnection()

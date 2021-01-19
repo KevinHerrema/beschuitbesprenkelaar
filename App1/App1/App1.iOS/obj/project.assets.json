@@ -987,11 +987,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
       "projectName": "App1.iOS",
-      "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
+      "projectPath": "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
       "packagesPath": "C:\\Users\\Jelmer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1012,8 +1012,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj": {
-              "projectPath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj"
+            "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj"
             }
           }
         }

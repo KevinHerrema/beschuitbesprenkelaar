@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lNOT1sB+75Q6YQs6B2hq5L2/5QTK+nn0gIEK95DWdCM41cYp+iEFTRc888iGXJzDyEavdAWnFs4hBbromw6IaQ==",
+  "dgSpecHash": "bTuAnjI6epGh/Xv//MtEsCSBWKaYm8kjRWDfFinKr15iS6tJvmkZLD0ZXItv4bl29DlHCprEiPXNNNDrN403Fw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1.Android\\App1.Android.csproj",
+  "projectFilePath": "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1.Android\\App1.Android.csproj",
   "expectedPackageFiles": [
     "D:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "D:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

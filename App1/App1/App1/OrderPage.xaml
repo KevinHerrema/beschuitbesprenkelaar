@@ -43,7 +43,7 @@
                             </StackLayout>
                             <StackLayout Grid.Row="2" Spacing="20" Padding="20" VerticalOptions="End">
                                 <Button Text="BEGIN" TextColor="White" BackgroundColor="Orange" WidthRequest="100" HeightRequest="40" 
-                                        CornerRadius="20" HorizontalOptions="Center" Clicked="send_Clicked"/>
+                                        CornerRadius="20" HorizontalOptions="Center" Clicked="send_Clicked" />
                             </StackLayout>
                         </Grid>
                         <Grid HeightRequest="210" WidthRequest="210" VerticalOptions="Start" HorizontalOptions="Center">

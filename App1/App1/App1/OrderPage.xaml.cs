@@ -38,9 +38,10 @@ namespace App1
         {            
            test.CloseConnection();            
         }
-        private void send_Clicked(object sender, EventArgs e)
+        private async void send_Clicked(object sender, EventArgs e)
         {            
-           test.beslagkeuze();           
+           test.beslagkeuze();
+           await Navigation.PushAsync(new LoadingPage());
         }
     }
 }

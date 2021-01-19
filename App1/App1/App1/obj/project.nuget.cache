@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ECxiXCM2VLBAEg35eCC/41Um31GgcJHOVH2Qk3ctCnJ6TvZLsd2OaDYWZ4q+pJDSwrBd0RJ0JEdmVgHTaD41g==",
+  "dgSpecHash": "0XdGsWYWl6xXgtTahSljH9heHWorQXxKaVtskLCE/UBYXtU7ffSPgU80UKfrKpCAZpMiKyLsJQ1BlMR6CU+6jA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jelmer\\Desktop\\App1\\App1\\App1\\App1.csproj",
+  "projectFilePath": "C:\\Users\\Jelmer\\Documents\\GitHub\\beschuitbesprenkelaar\\App1\\App1\\App1\\App1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jelmer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Jelmer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
