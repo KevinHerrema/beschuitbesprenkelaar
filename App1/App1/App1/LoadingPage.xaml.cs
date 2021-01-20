@@ -11,12 +11,18 @@ namespace App1
     public partial class LoadingPage : ContentPage
     {
         client test = new client();
-        double sensordata = 1.0;
+        double progressbar = 1;
         public LoadingPage()
         {
             InitializeComponent();
             Task.Run(RotateImage);
-            MainProgressBar.ProgressTo(sensordata, 9000, Easing.Linear);
+            MainProgressBar.ProgressTo(progressbar, 15000, Easing.Linear);
+    }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await Task.Delay(15500);
+            await this.Navigation.PushAsync(new MainPage());
         }
 
         private async void RotateImage()

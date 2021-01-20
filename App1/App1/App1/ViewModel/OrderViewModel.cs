@@ -32,10 +32,7 @@ namespace App1.ViewModel
         {
             return new List<Pick>
             {
-                new Pick { Title = "Hagelslag", Image = "Hagelslag.png", Description = procent() },
-                new Pick { Title = "Muisjes", Image = "MuisjesGroter.png", Description = "Muisjes zijn een voortreffelijke keuze voor op je beschuitje, daarnaast een echte klassieker!" },
-                new Pick { Title = "Vlokken", Image = "MuisjesGroter.png", Description = "Vlokken" },
-                new Pick { Title = "Witte Vlokken", Image = "MuisjesGroter.png", Description = "Vlokken maar dan wit" }
+                new Pick { Title = "Hagelslag", Image = "Hagelslag.png", Description = procent() }
             };
         }
         public class BaseViewModel : INotifyPropertyChanged

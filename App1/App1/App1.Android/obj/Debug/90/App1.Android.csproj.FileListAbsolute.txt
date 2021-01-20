@@ -1506,3 +1506,6 @@ C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\ob
 C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\obj\Debug\90\res\drawable\weightlogo.png
+C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\obj\Debug\90\res\drawable\appleman.png
+C:\Users\Jelmer\Documents\GitHub\beschuitbesprenkelaar\App1\App1\App1.Android\obj\Debug\90\res\drawable\scientistcolor.png

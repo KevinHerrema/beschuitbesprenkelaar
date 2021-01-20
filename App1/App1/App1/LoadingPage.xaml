@@ -18,13 +18,6 @@
                 </LinearGradientBrush>
             </BoxView.Background>
         </BoxView>
-        <Grid>
-            <StackLayout Orientation="Horizontal" Margin="25" Spacing="20" VerticalOptions="Start">
-                <ImageButton Source="BackButton1.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" 
-                    HorizontalOptions="Start" VerticalOptions="Center" Command="{Binding BackCommand}" Clicked="disconnect_Clicked" />
-                <Label Text="STOPPEN" TextColor="orange" FontSize="10" FontAttributes="Bold" VerticalOptions="Start"/>
-            </StackLayout>
-        </Grid>
         <StackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,-140,0,0" Spacing="30">
             <Grid HeightRequest="210" WidthRequest="210" HorizontalOptions="Center">
                 <Ellipse Stroke="Orange" StrokeThickness="3" Aspect="Fill"/>
@@ -33,13 +26,16 @@
             </Grid>
             <StackLayout HorizontalOptions="Center" Spacing="15">
                 <Label Text="MOMENTJE!" TextColor="White" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"/>
-                <Label Text="je beschuitje wordt klaargemaakt!" TextColor="White" FontSize="18" HorizontalOptions="Center"/>
+                <Label Text=""/>
+                <Label Text=""/>
+                <Label Text="Je beschuitje wordt klaargemaakt!" TextColor="Orange"  HorizontalOptions="Center"></Label>
             </StackLayout>
         </StackLayout>
-        <StackLayout>
-            <Label Text="{Binding Progress, Source={x:Reference MainProgressBar}}"></Label>
-            <ProgressBar Progress="0.0" x:Name="MainProgressBar" WidthRequest="200" HeightRequest="900" ProgressColor="Pink"></ProgressBar>
-        </StackLayout>
+        <Grid>
+            <StackLayout>
+                <ProgressBar Progress="0" x:Name="MainProgressBar" WidthRequest="200" HeightRequest="920" ProgressColor="Orange"></ProgressBar>
+            </StackLayout>
+        </Grid>
         <StackLayout Grid.Row="2" Margin="25,0,0,25" Spacing="10">
             <Label Text="Leuke feitjes" TextColor="White" Opacity="0.5" FontSize="14"/>
             <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never">

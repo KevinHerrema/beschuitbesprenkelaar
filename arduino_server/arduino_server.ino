@@ -1,17 +1,3 @@
-/*
- UDPSendReceiveString:
- This sketch receives UDP message strings, prints them to the serial port
- and sends an "acknowledge" string back to the sender
-
- A Processing sketch is included at the end of file that can be used to send
- and received messages for testing with a computer.
-
- created 21 Aug 2010
- by Michael Margolis
-
- This code is in the public domain.
- */
-
 
 #include <Ethernet.h>
 #include <EthernetUdp.h>
@@ -24,13 +10,14 @@ byte mac[] = {
 IPAddress ip(192, 168, 178, 36);
 
 unsigned int localPort = 11000;      // local port to listen on
-#define echoPin 7
-#define   trigPin 8
+#define echoPin 2
+#define trigPin 3
 // buffers for receiving and sending data
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE];  // buffer to hold incoming packet,
-char ReplyBuffer[] = "acknowledged";        // a string to send back
+char ReplyBuffer[] = "15";        // a string to send back
+char ReplyBuffer2[] = "aangenomen";
 long duration; 
-long distance; 
+int distance; 
 // An EthernetUDP instance to let us send and receive packets over UDP
 EthernetUDP Udp;
 
@@ -40,10 +27,7 @@ void setup() {
    pinMode(9, OUTPUT); 
    pinMode(echoPin, INPUT);
    pinMode(trigPin, OUTPUT) ; 
-  //Ethernet.init(0);   // Teensy 2.0
-  //Ethernet.init(20);  // Teensy++ 2.0
-  //Ethernet.init(15);  // ESP8266 with Adafruit Featherwing Ethernet
-  //Ethernet.init(33);  // ESP32 with Adafruit Featherwing Ethernet
+
 
   // start the Ethernet
   Ethernet.begin(mac, ip);
@@ -102,70 +86,43 @@ void loop() {
     String test = String(packetBuffer);
     Serial.println(test.length());
     Serial.println(test);
-    if(test == "on"){
+    if(test == "sens"){
       digitalWrite(9, HIGH); 
-      }
-     if(test == "off"){
-      digitalWrite(9, LOW); 
-      }
-    if(test == "sen"){
-      digitalWrite(trigPin,LOW);
+       digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
-  digitalWrite(trigPin,HIGH);
+  digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin,LOW);
-  duration = pulseIn(echoPin,HIGH);
-  distance = duration/58.2;
-  Serial.println(distance);
-   
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2; 
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+      Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+     
+String str = String(distance);
+str.toCharArray(ReplyBuffer,16);
+    Udp.write(ReplyBuffer);
+    Udp.endPacket();
+      }
+     if(test == "hagel"){
+      digitalWrite(9, LOW); 
+      Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+    Udp.write(ReplyBuffer2);
+    Udp.endPacket();
       }
 
-    // send a reply to the IP address and port that sent us the packet we received
-    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
-    Udp.write(distance);
-    Udp.endPacket();
+   
+     
+
+    
+   
     
   }
-  delay(10);
-}
+  
+}    
 
-
-/*
-  Processing sketch to run with this example
- =====================================================
-
- // Processing UDP example to send and receive string data from Arduino
- // press any key to send the "Hello Arduino" message
-
-
- import hypermedia.net.*;
-
- UDP udp;  // define the UDP object
-
-
- void setup() {
- udp = new UDP( this, 6000 );  // create a new datagram connection on port 6000
- //udp.log( true ); 		// <-- printout the connection activity
- udp.listen( true );           // and wait for incoming message
- }
-
- void draw()
- {
- }
-
- void keyPressed() {
- String ip       = "192.168.1.177";	// the remote IP address
- int port        = 8888;		// the destination port
-
- udp.send("Hello World", ip, port );   // the message to send
-
- }
-
- void receive( byte[] data ) { 			// <-- default handler
- //void receive( byte[] data, String ip, int port ) {	// <-- extended handler
-
- for(int i=0; i < data.length; i++)
- print(char(data[i]));
- println();
- }
- */
+    
+   
+    
+  

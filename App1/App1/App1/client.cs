@@ -22,13 +22,6 @@ namespace App1
         string ontvangen;
         public double recievesens()
         {
-            double sensordata = Convert.ToInt32(ontvangen);
-            sensordata = sensordata / 22 * 100;
-            return sensordata;
-        }
-
-        public void OpenConnection()
-        {
 
             endPoint = new IPEndPoint(serverAddr, 11000);
             sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
@@ -40,8 +33,10 @@ namespace App1
             int bytesync = sock.Receive(recieve_buffer);
 
             ontvangen = Encoding.ASCII.GetString(recieve_buffer, 0, bytesync);
-
-
+            double sensordata = Convert.ToInt32(ontvangen);
+            sensordata = sensordata / 22 * 100;
+            sensordata = 100 - sensordata;
+            return sensordata;
         }
 
         public void beslagkeuze()

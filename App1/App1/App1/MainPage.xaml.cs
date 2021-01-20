@@ -25,14 +25,6 @@ namespace App1
                 await BannerImg.RelRotateTo(360, 10000, Easing.Linear);
             }
         }
-        private void connect_Clicked(object sender, EventArgs e)
-        {
-           
-            
-                test.OpenConnection();
-
-
-        }
 
     }
 }

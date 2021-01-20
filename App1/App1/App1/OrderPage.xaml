@@ -38,7 +38,10 @@
                             <StackLayout Grid.Row="1" Padding="30" VerticalOptions="Center">
                                 <Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold"
                                         HorizontalTextAlignment="Center"/>
-                                <Label Text="{Binding Description}" TextColor="Black" FontSize="14"
+                                <Label Text=" "></Label>
+                                <Label Text=" "></Label>
+                                <Image Source="WeightLogo.png"></Image>
+                                <Label Text="{Binding Description}" TextColor="black" FontSize="24"
                                         HorizontalTextAlignment="Center"/>
                             </StackLayout>
                             <StackLayout Grid.Row="2" Spacing="20" Padding="20" VerticalOptions="End">

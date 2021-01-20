@@ -28,7 +28,7 @@
                 <Label Text="Zin in een lekker beschuitje?" TextColor="White" FontSize="18" HorizontalOptions="Center"/>
                 <Label Text="BESCHUITBESPRENKELAAR" TextColor="White" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"/>
                 <Button Text="Beginnen" TextColor="White" BackgroundColor="orange" WidthRequest="150" HeightRequest="46" 
-                    CornerRadius="23" HorizontalOptions="Center"  Clicked="connect_Clicked"  Command="{Binding StartCommand}"/>
+                    CornerRadius="23" HorizontalOptions="Center" Command="{Binding StartCommand}"/>
             </StackLayout>
         </StackLayout>
         <StackLayout Grid.Row="2" Margin="25,0,0,25" Spacing="10">
