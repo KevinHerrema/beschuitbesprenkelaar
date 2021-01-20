@@ -1,13 +1,15 @@
 
+
 #include <Ethernet.h>
 #include <EthernetUdp.h>
+#include <Servo.h>
 
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
-IPAddress ip(192, 168, 178, 36);
+IPAddress ip(192, 168, 1, 36);
 
 unsigned int localPort = 11000;      // local port to listen on
 #define echoPin 2
@@ -15,9 +17,11 @@ unsigned int localPort = 11000;      // local port to listen on
 // buffers for receiving and sending data
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE];  // buffer to hold incoming packet,
 char ReplyBuffer[] = "15";        // a string to send back
-char ReplyBuffer2[] = "aangenomen";
+char ReplyBuffer2[] = "done";
 long duration; 
 int distance; 
+Servo myservo; 
+int pos; 
 // An EthernetUDP instance to let us send and receive packets over UDP
 EthernetUDP Udp;
 
@@ -27,7 +31,7 @@ void setup() {
    pinMode(9, OUTPUT); 
    pinMode(echoPin, INPUT);
    pinMode(trigPin, OUTPUT) ; 
-
+   myservo.attach(9);
 
   // start the Ethernet
   Ethernet.begin(mac, ip);
@@ -108,6 +112,17 @@ str.toCharArray(ReplyBuffer,16);
      if(test == "hagel"){
       digitalWrite(9, LOW); 
       Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+      for (pos = 0; pos <= 180; pos += 1) 
+      {  
+    myservo.write(pos);             
+   delay(15);                      
+      }
+  for (pos = 180; pos >= 0; pos -= 1) 
+  {
+   myservo.write(pos);             
+    delay(15);                      
+  }
+}
     Udp.write(ReplyBuffer2);
     Udp.endPacket();
       }
@@ -119,10 +134,3 @@ str.toCharArray(ReplyBuffer,16);
    
     
   }
-  
-}    
-
-    
-   
-    
-  
