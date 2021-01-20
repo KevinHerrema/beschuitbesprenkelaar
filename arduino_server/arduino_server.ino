@@ -9,7 +9,7 @@
 byte mac[] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
-IPAddress ip(192, 168, 1, 36);
+IPAddress ip(192, 168, 178, 36);
 
 unsigned int localPort = 11000;      // local port to listen on
 #define echoPin 2

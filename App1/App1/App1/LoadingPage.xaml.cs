@@ -16,12 +16,12 @@ namespace App1
         {
             InitializeComponent();
             Task.Run(RotateImage);
-            MainProgressBar.ProgressTo(progressbar, 15000, Easing.Linear);
     }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            await Task.Delay(15500);
+            await MainProgressBar.ProgressTo(progressbar, 15000, Easing.Linear);
+            await Task.Delay(500);
             await this.Navigation.PushAsync(new MainPage());
         }
 
